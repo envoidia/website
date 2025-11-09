@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Misc Keywords</h1>
+     <p>This page details keywords that don't fit in any other page</p>
+<p><code>public</code>, <code>private</code>, <code>void</code>: Same as Java
+<br><code>protected</code>: Can be accessed from the containing class or any derived from it
+<br><code>internal</code>: Can be accessed from the same assembly (package); the same as Java's default access
+<br><code>protected internal</code>: Can be accessed from the current assembly or any type derived from the current class
+<br><code>private protected</code>: Can be accessed from the containing class or a type in the current assembly derived from the current class
+<br><code>file</code>: Can only be accessed from the current source file</p>
+<p><code>readonly</code>: Equivalent to Java's <code>final</code>
+<code>const</code>: A compile-time constant</p>
+<p><code>async</code>: Specifies an asynchronous method, lambda expression, or anonymous method
+<code>event</code>: Enables an object to trigger notifications
+<code>volatile</code>: Indicates a field that may be modified on separate threads. In most cases, it should be avoided</p>
+<p><code>extern</code>: Declares a method that is implemented externally, typically in a different language that is loaded as a DLL</p>
+<p><code>params</code>: Equivalent to Java's varargs <code>...</code>, but it does not need to be an array</p>
+<pre><code class="language-csharp">public void ParamsExample(params List&lt;int&gt; list) {}
+ParamsExample(1, 2, 3, 4);</code></pre>
+<p><code>namespace</code>: Similar to Java's <code>package</code>, but does not need to match the filename, and can be declared as a statement for a whole file, or a block for a section of a file
+<code>using</code> and <code>using static</code>: Equivalent to Java's <code>import</code> and <code>import static</code>. Can be prefixed with <code>global</code> to apply to all files in the current compilation
+<code>extern alias</code>: Can specify aliases for specific assemblies, so they can distinguished even if they have the same fully-qualified type names</p>
+<p><code>default</code>: Can be used in a <a href="switch_statements_and_expressions">switch statement</a>, <a href="generics">generic constraint</a>, or to produce the default value of a type</p>
+<h3>Contextual Keywords</h3>
+<p>Contextual keywords are not reserved, but have special meanings in certain contexts. Most later-added keywords are contextual for backwards compatibility</p>
+<p><code>add</code>, <code>remove</code>: Define a custom event accessor
+<code>partial</code>: Allows a type or member to be split into multiple definitions</p>
+<p>Also see: <a href="./classes">Classes</a>, <a href="./enums">Enums</a>, <a href="./extensions">Extensions</a>, <a href="./generics">Generics</a>, <a href="./interfaces">Interfaces</a>, <a href="./linq_expressions">LINQ Expressions</a>, <a href="./nullability">Nullability</a>, <a href="./object_initializers">Object Initializers</a>, <a href="./operator_overloading">Operator Overloading</a>, <a href="./operators">Operators</a>, <a href="./pattern_matching">Pattern Matching</a>, <a href="./properties">Properties</a>, <a href="./references">References</a>, <a href="./statements">Statements</a>, <a href="./structs">Structs</a>, <a href="./switch_statements_and_expressions">Switch Statements and Expressions</a>, <a href="./types">Types</a>, <a href="./unsafe_code">Unsafe Code</a></p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords">Keywords</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/">Asynchronous Programming</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/standard/events/">Events</a></li></ul>
+  </body>
+</html>

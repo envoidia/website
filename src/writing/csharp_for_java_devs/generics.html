@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Generics</h1>
+    <p>Unlike Java, C# generics are reified, meaning their type is known at runtime, and they can be value types and not just objects</p>
+<p>Constraints:
+    <ul><li><code>where</code>: Specifies constraints
+    <li><code>in</code>: Specifies a contravariant type parameter
+    <li><code>out</code>: Specifies a covariant type parameter
+    <li><code>new</code>: Specifies that a type argument must have a public parameterless constructor
+     <li><code>unmanaged</code>: Limits to unmanaged types
+     <li><code>class</code>: Limits to classes
+     <li><code>struct</code>: Limits to structs
+     <li><code>ref struct</code>: Limits to ref structs
+     <li><code>notnull</code>: Limits to non-nullable types
+     <li><code>default</code>: Complicated; see <a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/where-generic-type-constraint">docs</a> for details (todo explain here)</li></ul>
+<p>In this case, <code>Foo</code>'s <code>T</code> must extend <code>Bar</code> and have a public parameterless constructor, and <code>U</code> must be a <code>struct</code>:</p>
+<pre><code class="language-csharp">public class Foo&lt;T, U&gt;
+    where T : Bar&lt;T&gt;, new()
+    where U : struct {}</code></pre>
+    <br>MS Docs:
+    <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/standard/generics/">Generics Docs</a>
+    <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/generics">Generics Guide</a>
+    <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/where-generic-type-constraint">where</a></li></ul>
+  </body>
+</html>

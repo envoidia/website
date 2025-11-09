@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Properties</h1>
+    <p>Properties define fields that can contain getter and setter methods</p>
+<p><code>get</code> defines a getter, <code>set</code> a setter, and <code>init</code> a setter that is only accessible in an <a href="./object_initializers">object initializer</a>. They can have access modifiers (the access modifier must be of greater privacy than the property itself) and default values</p>
+<pre><code class="language-csharp">public class Person {
+    public string FirstName { get; set; }
+	public string LastName { get; set; }
+	public string FullName => FirstName + " " + LastName;
+	public uint Age { get; private set; } = 0;
+}</code></pre>
+<p>They are accessed the same as you would fields, eg <code>somePerson.FirstName = "Jerry"</code></p>
+<p>Properties can define arbitrary methods to be called on get or set, where <code>field</code> is the property's backing field and <code>value</code> is the incoming value from the setter</p>
+<pre><code class="language-csharp">public class Label {
+	public string Text {  
+	    get;  
+	    set {  
+	        field = value;  
+	        this.Origin = this.CalcOrigin();  
+	    }
+    } = "";
+}</code></pre>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties">Properties</a></li></ul>
+  </body>
+</html>

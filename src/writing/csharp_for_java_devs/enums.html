@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Enums</h1>
+    <p>Unlike Java enums, C# enums cannot contain fields/<a href="./properties">properties</a> or methods. However, they can have <a href="./extensions">extensions</a>,</p>
+        <p>Unlike Java, enums have a backing value type (default <code>int</code>) and can be cast (eg <code>(SomeEnum) 10</code> and <code>(int) SomeEnumMember</code>). These casts should usually be avoided</p>
+        <p>The backing type can be changed with <code>:</code> syntax</p>
+        <p>Each enum member can also be assigned a specific value:</p>
+        <pre><code class="language-csharp">enum Color : ushort {
+    Red,
+    Green = 10,
+    Blue
+}</code></pre>
+        <p>In this case, <code>Red</code> is <code>0</code>, <code>Green</code> is <code>10</code>, and <code>Blue</code> is <code>11</code></p>
+        <p>Also see: <a href="./classes">Classes</a>, <a href="./interfaces">Interfaces</a>, <a href="./structs">Structs</a></p>
+    <br>MS Docs:
+    <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum">Enums</a></li></ul>
+  </body>
+</html>

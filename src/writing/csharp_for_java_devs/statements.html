@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Statements</h1>
+    <p><code>if</code>, <code>else</code>, <code>for</code>, <code>do</code>, <code>while</code>, <code>break</code>, <code>continue</code>, <code>return</code>, <code>try</code>, <code>catch</code>, and <code>finally</code> are the same as Java. However, loops cannot be labeled</p>
+<p><code>catch</code> can use <code>when</code> to specify a condition that must be true for the <code>catch</code> to execute</p>
+<p><code>foreach</code> is the same as Java's <code>for each</code>. <code>await foreach</code> can be used to consume an asynchronous stream of data</p>
+<p><code>goto</code> can be used to move to a statement that is marked by a label. In switch statements, <code>goto case</code> can be used to jump to a different <code>case</code>. <code>goto</code> should generally be avoided. There are some cases where it is justified, but only use it if you know what you're doing</p>
+<p><code>checked {}</code> blocks can be used to create an area in which an integer overflow will throw an <code>OverflowException</code>. You can also change the <code>CheckForOverflowUnderflow</code> compiler option to make everything checked by default, and use <code>unchecked {}</code> blocks to suspend the checks</p>
+<pre><code class="language-csharp">uint a = uint.MaxValue;
+
+try {
+    checked {
+        Console.WriteLine(a + 1);
+    }
+} catch (OverflowException e) {
+    Console.WriteLine(e.Message); // Outputs Arithmetic operation resulted in an overflow.
+}</code></pre>
+<p>You can define a separate <code>checked</code> version of an <a href="./operator_overloading">operator overload</a> with <code>operator checked</code>, which will be called in <code>checked</code> context instead of the regular operator. This is only needed if you want to have different behavior in <code>checked</code> context -- usually, the regular operator works fine</p>
+<p><code>lock {}</code> can be used to acquire a mutual-exclusion field for a given object and execute a statement, for multithreading safety</p>
+<p><code>using {}</code> can be used to acquire and dispose of an acquired <code>IDisposable</code> instance</p>
+<p><code>yield return</code> provides the next value in iteration, and <code>yield break</code> signals the end of iteration</p>
+<p>Also see: <a href="./switch_statements_and_expressions">Switch Statements and Expressions</a></p>
+<br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements">Statements</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/when">when</a></li></ul>
+  </body>
+</html>

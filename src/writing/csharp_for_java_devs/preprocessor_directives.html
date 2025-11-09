@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Preprocessor Directives</h1>
+    <p>Preprocessor directives are instructions that are processed on compilation and then erased. They are similar to macros, but they cannot be used to create traditional macros. They are also similar to Java annotations</p>
+<p><code>#define SYMBOLNAME</code> is used to define a symbol. It cannot have a value, it can only exist or not exist</p>
+<p><code>#if</code>, <code>#elif</code>, <code>#else</code>, and <code>#endif</code> can be used to only compile specific sections of code if a specified symbol is defined</p>
+<p>There are numerous automatically generated symbols, including symbols for specific net versions and platforms, <code>DEBUG</code> (set in debug mode), and <code>TRACE</code> (enables tracing)</p>
+<pre><code class="language-csharp">#define KEEP_DEBUG_MODE_IN_RELEASE
+
+bool debugMode = false;
+
+#if (DEBUG || KEEP_DEBUG_MODE_IN_RELEASE)
+    Console.WriteLine(&quot;Enabling debug mode&quot;);
+    debugMode = true;
+#endif</code></pre>
+<p><code>#error</code>, <code>#warning</code>, and <code>#line</code> allows you to generate errors and warnings</p>
+<p><code>#pragma warning disable/restore</code> allows you to suppress/restore certain warnings at certain sections of code</p>
+<p><code>#pragma checksum</code> generates checksums for the given source file</p>
+<p>Preprocessor directives can also be used to generate <code>.csproj</code> files, which is used for creating file-based apps (programs that can be run from a single source file)</p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives">Preprocessor Directives</a></li></ul>
+  </body>
+</html>

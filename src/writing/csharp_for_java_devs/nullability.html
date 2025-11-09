@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Nullability</h1>
+    <p>Add <code>&lt;Nullable&gt;enable&lt;/Nullable\&gt;</code> to your <code>.csproj</code> file to enable global null safety</p>
+<p>Suffixing a type with <code>?</code> in variable declaration indicates that it may be null</p>
+<p>In order to check if a variable is nullable, use <code>IsNullable(typeof(variable))</code></p>
+<p>A suffix of <code>!</code> when assigning a variable can be used for null forgiveness. Avoid using this in most cases</p>
+<pre><code class="language-csharp">string? nullable = null;
+string notNull = &quot;abc&quot;;
+notNull = nullable!; // Will probably cause bugs</code></pre>
+<p><a href="./pattern_matching">Pattern matching</a> (<code>is</code>, <code>is not</code>) is preferred over equality expressions (<code>==</code>, <code>!=</code>)</p>
+<p><code>??</code> returns the left-hand operand if it isn't null, and the right-hand operand if it is</p>
+<p><code>??=</code> assigns the value of its right-hand operand to its left-hand operand if its left-hand operand is null</p>
+<pre><code class="language-csharp">int? a = null;
+
+Console.WriteLine(a is null); // Outputs true
+Console.WriteLine(a ?? 3); // Outputs 3
+
+a ??= 5; // a is now 5
+a ??= 10; // a is still 5
+
+Console.WriteLine(a ?? 8); // Outputs 5</code></pre>
+<p><code>?.</code> and <code>?[]</code> can be used to access or assign a member or element only if it isn't <code>null</code>, and are short-circuiting (a chain of operations will stop at a fail)</p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-reference-types">Nullable Reference Types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types">Nullable Value Types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator">Null-Coalescing Operators</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators">Member Access Operators</a></li></ul>
+  </body>
+</html>

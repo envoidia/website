@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Operator Overloading</h1>
+    <p>You can overload an operator to give it a unique definition for a given class or struct. This way, Java's <code>a.add(b).multiply(c).subtract(d)</code>-style code is avoided</p>
+<pre><code class="language-csharp">public struct Vector2 {
+    float X;
+    float Y;
+
+    public Vector2(float x, float y) {  
+        this.X = x;  
+        this.Y = y;  
+    }
+
+    public static Vector2 operator +(Vector2 value1, Vector2 value2) {  
+        value1.X += value2.X;  
+        value1.Y += value2.Y;  
+        return value1;  
+    }
+}
+
+Vector2 a = new(0.3f, 0.6f);
+Vector2 b = new (0.4f, 0.8f);
+Console.WriteLine(a + b); // Outputs {X:0.70000005 Y:1.4000001}</code></pre>
+<p>When defining an operator overload, be certain that it is actually necessary and clearly is performing the operation expected of the operator</p>
+<p>Most programmers will never create their own operator overload, but it's important to understand how the ones in libraries you're using work</p>
+<p>Some operators must be overloaded in sets. For instance, if overloading <code>&gt;</code>, you must also overload <code>&lt;</code></p>
+<p>Overloading <code>a &amp; b</code> and <code>a | b</code> also overloads <code>a &amp;&amp; b</code> and <code>a || b</code> implicitly</p>
+<p>You can overload <code>true</code> and <code>false</code> to allow a type to be truth-checked</p>
+<p>Non-overloadable operators: 
+    <ul><li>Compound assignments: Automatically generated
+    <li><code>a &amp;&amp; b</code>, <code>a || b</code>: Automatically generated when you overload <code>true</code>, <code>false</code>, <code>a &amp; b</code>, and <code>a | b</code>
+    <li><code>a[i]</code>, <code>a?[i]</code>: Define an <a href="./indexers">indexer</a>
+    <li><code>(type) a</code>: Define a <a href="./type_testing_and_casting">type conversion</a>
+    <li><code>^a</code>, <code>a = b</code>, <code>a.b</code>, <code>a?.b</code>, <code>c ? t : f</code>, <code>a ?? b</code>, <code>??= b</code>, <code>a..b</code>, <code>a-&gt;b</code>, <code>=&gt;</code>, <code>f(a)</code>, <code>as</code>, <code>await</code>, <code>checked</code>, <code>unchecked</code>, <code>default</code>, <code>delegate</code>, <code>is</code>, <code>nameof</code>, <code>new</code>, <code>sizeof</code>, <code>stackalloc</code>, <code>switch</code>, <code>typeof</code>, <code>with</code></li></ul>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading">Operator Overloading</a></li></ul>
+  </body>
+</html>

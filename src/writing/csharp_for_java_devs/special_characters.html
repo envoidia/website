@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Special Characters</h1>
+    <p>The discard <code>_</code> can be used to <a href="Pattern%20Matching.md">pattern match</a> any pattern, or declare an unused variable in <a href="references"><code>out</code> arguments</a>, lambda expression parameters, and deconstruction arguments</p>
+<p><code>$</code> defines an interpolated string literal, a string with embedded expressions using <code>{a}</code>. If you start an interpolated string literal with multiple <code>$</code>, any sequence of braces shorter than the number of <code>$</code> is embedded in the resulting string. To embed an expression, use the same number of braces as <code>$</code></p>
+<pre><code class="language-csharp">int a = 5;
+int b = 10;
+Console.WriteLine($&quot;a is {a} and b * 3 + a is {b * 3 + a}&quot;); // Outputs a is 5 and b * 3 + a is 35</code></pre>
+<p>The verbatim identifier <code>@</code> defines a verbatim string literal, a string where most escape sequences are interpreted literally. The only sequences that are not interpreted literally are quote escape sequences and interpolated string brace escape sequences</p>
+<pre><code class="language-csharp">// These both produce the same string
+string filename1 = @&quot;c:\documents\files\u0066.txt&quot;;
+string filename2 = &quot;c:\\documents\\files\\u0066.txt&quot;;</code></pre>
+<p>A sequence of at least 3 quotes can be used to define a raw string literal, which can contain any text without escaping. They can contain a sequence of up to 1 less than the amount of quotes they are declared with</p>
+<pre><code class="language-csharp">&quot;&quot;&quot;&quot;&quot;
+This is a multi-line
+string with spaces and indentation that can contain &quot;&quot;&quot;&quot;
+    This line is indented
+The syntax highlighting doesn't understand this, so the highlighting is wrong
+&quot;&quot;&quot;&quot;&quot;</code></pre>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens">Tokens</a></li></ul>
+  </body>
+</html>

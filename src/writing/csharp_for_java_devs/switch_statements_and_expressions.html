@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Switch Statements and Expressions</h1>
+     <p>Switch statements are the same as Java, but can use <a href="./pattern_matching">pattern matching</a></p>
+<p><code>goto case</code> can be used to jump to a different <code>case</code>. Do not use this</p>
+<p>Switch expressions are declared with slightly different syntax. <code>_</code> matches <code>default</code></p>
+<p>You may add case guards that must be matched alongside patterns with <code>when</code> and a boolean value</p>
+<pre><code class="language-csharp">public static Point Transform(Point point) =&gt; point switch {
+    { X: 0, Y: 0 }                    =&gt; new Point(0, 0),
+    { X: var x, Y: var y } when x &lt; y =&gt; new Point(x + y, y),
+    { X: var x, Y: var y } when x &gt; y =&gt; new Point(x - y, y),
+    { X: var x, Y: var y }            =&gt; new Point(2 * x, 2 * y),
+};</code></pre>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements#the-switch-statement">Switch Statement</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/switch-expression">Switch Expression</a></li></ul>
+  </body>
+</html>

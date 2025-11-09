@@ -1,0 +1,9 @@
+# IDE files
+/.idea
+/.vscode
+/src/.idea
+/src/.vscode
+
+# Build files
+/build
+/build-min

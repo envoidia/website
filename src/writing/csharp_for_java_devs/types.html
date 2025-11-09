@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Types</h1>
+     <p>Value types (primitives and <a href="./structs">structs</a>) are stored on the stack and do not invoke the GC. Reference types (objects) are stored on the heap and do invoke the GC</p>
+<p>Value types can escape to the heap if part of a <a href="./collections">collection</a></p>
+<p>integer literals can be declared in decimal, hexadecimal (<code>0x</code> prefix), or binary (<code>0b</code> prefix)</p>
+<p><code>short</code>, <code>int</code>, and <code>long</code> are the same as Java. <code>sbyte</code> is the same as Java's <code>byte</code></p>
+<p><code>byte</code> is an unsigned byte, <code>uint</code> is an unsigned int, and <code>ulong</code> is an unsigned long
+<code>nint</code> and <code>nuint</code> use the platform they're running on (32 or 64 bit). Only use this if working directly with platform details (eg memory addresses)</p>
+<p><code>float</code> and <code>double</code> are the same as Java
+<code>decimal</code> is an extremely precise 128-bit float, accurate up to 28-29 digits, with a "small" range of 10^-28 to 10^28</p>
+<p><code>bool</code> is the same as Java <code>boolean</code>
+<code>char</code> cannot be directly treated as a 16-bit integer like it can in Java, but it can be cast</p>
+<p><code>object</code> is Java <code>Object</code> (any reference type)</p>
+<p><code>string</code> is Java <code>String</code> (immutable reference type, array of <code>char</code>s)</p>
+<p><a href="./nullability">Nullability</a>: Primitives can be <code>null</code></p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types">Integral Numeric Types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types">Floating-Point Numeric Types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/reference-types">Reference Types</a></li></ul>
+  </body>
+</html>

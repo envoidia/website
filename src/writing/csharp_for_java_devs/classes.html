@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Classes</h1>
+     <p>Classes can be:
+      <ul><li><code>abstract</code>
+      <li><code>sealed</code>: Equivalent to Java's <code>final</code>; there is no equivalent to Java's <code>sealed</code>
+      <li><code>static</code>: Everything contained within must be <code>static</code>
+      <li><code>record</code>: Mostly the same as Java. Can also be declared with <code>record class</code> to disambiguate from <code>record struct</code>s. todo more detail</li></ul>
+    <p><code>this</code> is the same. <code>base</code> is used instead of <code>super</code></p>
+    <p>Inheritance is much the same, but instead of <code>extends</code> or <code>implements</code>, the syntax is <code>class ClassName : NameOfClassItExtends, IInterfaceItImplements</code>. Interface names should be prefixed with <code>I</code> to make up for lost clarity from lack of a specific keyword</p>
+    <p>In order to call the base constructor, use <code>:</code> syntax before the constructor body</p>
+    <pre><code class="language-csharp">public class Foo : Bar {
+    public Foo(int lorem) : base(lorem, &quot;Ipsum&quot;, 10) {}
+}</code></pre>
+    <p>Classes can have primary constructors (much like records). Primary constructor fields can be used directly, or given to <a href="./properties">properties</a></p>
+    <pre><code class="language-csharp">public class Foo(int lorem, string ipsum, char dolor) : Bar(lorem, ipsum) {
+    public int Dolor => dolor;    
+}</code></pre>
+    <p>When overriding, you must use the <code>override</code> keyword. Only <code>virtual</code>, <code>abstract</code>, or <code>override</code> members can be overridden</p>
+    <p><code>new</code> can be used to hide a member inherited from a base class</p>
+    <p>Generally, you should be using <a href="./properties">properties</a> instead of fields</p>
+      <p>Also see: <a href="./enums">Enums</a>, <a href="./extensions">Extensions</a>, <a href="./interfaces">Interfaces</a>, <a href="./object_initializers">Object Initializers</a>, <a href="./structs">Structs</a></p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/class">Classes</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/record">Records</a></li></ul>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Anonymous Types</h1>
+    <p>Anonymous types can only be created with <a href="./object_initializers">Object Initializers</a>. They are typically used in <a href="./linq_expressions">LINQ Expressions</a></p>
+    <pre><code class="language-csharp">var v = new { Amount = 108, Message = &quot;Hello&quot; };
+Console.WriteLine(v.Amount + v.Message); // Outputs 108Hello</code></pre>
+    <p>You can use local variables to declare an anonymous type, and their name will be taken without having to specify it again</p>
+    <p>Anonymous types should be using sparingly. In most cases, it is better to use a <a href="./classes">class</a>, <a href="./structs">struct</a>, or <a href="./tuples">tuple</a></p>
+    <br>MS Docs:
+    <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types">Anonymous Types</a></li></ul>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Pattern Matching</h1>
+     <p>Type patterns <code>variable is type</code> can be used to check a type</p>
+<p>Declaration patterns can be used to declare new local variables</p>
+<pre><code class="language-csharp">object greeting = &quot;Hello, World!&quot;;
+if (greeting is string message) {
+    Console.WriteLine(message);  // Output: Hello, World!
+}</code></pre>
+<p>Patterns can be used in <a href="switch_statements_and_expressions">switch statements and expressions</a>. The discard pattern <code>_</code> matches any expression (can only be used in switch expressions, not statements)</p>
+<pre><code class="language-csharp">public static int GetSourceLabel&lt;T&gt;(IEnumerable&lt;T&gt; source) =&gt; source switch {
+    Array array =&gt; 1,
+    ICollection&lt;T&gt; collection =&gt; 2,
+    _ =&gt; 3
+};
+
+int[] numbers = [10, 20, 30];
+Console.WriteLine(GetSourceLabel(numbers));  // Output: 1
+
+List&lt;char&gt; letters = ['a', 'b', 'c', 'd'];
+Console.WriteLine(GetSourceLabel(letters));  // Output: 2</code></pre>
+<p>Patterns can use relational operators</p>
+<pre><code class="language-csharp">public static string GetSeason(DateTime date) =&gt; date.Month switch {
+    &gt;= 3 and &lt; 6 =&gt; &quot;spring&quot;,
+    &gt;= 6 and &lt; 9 =&gt; &quot;summer&quot;,
+    &gt;= 9 and &lt; 12 =&gt; &quot;autumn&quot;,
+    12 or (&gt;= 1 and &lt; 3) =&gt; &quot;winter&quot;,
+    _ =&gt; throw new ArgumentOutOfRangeException(nameof(date), $&quot;Unexpected month: {date.Month}&quot;),
+};
+
+Console.WriteLine(GetSeason(new DateTime(2021, 3, 14)));  // Output: spring
+Console.WriteLine(GetSeason(new DateTime(2021, 7, 19)));  // Output: summer
+Console.WriteLine(GetSeason(new DateTime(2021, 2, 17)));  // Output: winter</code></pre>
+<p>You can use a property pattern to match an expression's <a href="./properties">properties</a> or fields</p>
+<pre><code class="language-csharp">public bool IsNearChristmas(DateTime date) =&gt;
+    date is { Month: 12, Day: &gt;= 21 and &lt;= 25 };</code></pre>
+<p>When pattern matching with <a href="./tuples">tuples</a>, you can match each component individually</p>
+<pre><code class="language-csharp">public bool IsCelebratingHoliday(bool celebratesChristmas, bool celebratesHalloween, DateTime date) =&gt; (celebratesChristmas, celebratesHalloween, date) switch {
+    (true, _, { Month: 12, Day: &gt;= 21 and &lt;= 25 }) =&gt; true,
+    (_, true, { Month: 10, Day: &gt;= 25 and &lt;= 31 }) =&gt; true,
+    _ =&gt; false
+};</code></pre>
+<p>The <code>var</code> pattern matches any expression, including <code>null</code>, and assigns its result to a new local variable, useful for additional checks</p>
+<pre><code class="language-csharp">static Point Transform(Point point) =&gt; point switch
+{
+    var (x, y) when x &lt; y =&gt; new Point(-x, y),
+    var (x, y) when x &gt; y =&gt; new Point(x, -y),
+    var (x, y) =&gt; new Point(x, y),
+};</code></pre>
+<p><a href="./collections">Collections</a> can be matched against a sequence of patterns. The slice pattern <code>..</code> can be used to match at the start or end</p>
+<pre><code class="language-csharp">int[] arr = [1, 2, 3, 4, 5];
+
+Console.WriteLine(arr is [1, 2, 3, 4, 5]);  // Outputs True
+Console.WriteLine(arr is [1, 2, 3, 4, 5, 6]);  // Outputs False
+Console.WriteLine(arr is [1, 2, ..]);  // Outputs True
+Console.WriteLine(arr is [0 or 1, &lt;= 2, &gt;= 3, ..]);  // Outputs True</code></pre>
+<p>Elements can also be captured with <code>var</code></p>
+<pre><code class="language-csharp">List&lt;int&gt; numbers = [1, 2, 3];
+
+if (numbers is [var first, _, _]) {
+    Console.WriteLine($&quot;The first element of a three-item list is {first}.&quot;);
+}</code></pre>
+<p>You can nest a subpattern within a slice pattern</p>
+<pre><code class="language-csharp">void Validate(int[] numbers) {
+    var result = numbers is [&lt; 0, .. { Length: 2 or 4 }, &gt; 0] ? &quot;valid&quot; : &quot;invalid&quot;;
+    Console.WriteLine(result);
+}
+
+Validate([-1, 0, 1]);  // Outputs invalid
+Validate([-1, 0, 0, 1]);  // Outputs valid
+Validate([-1, 0, 0, 0, 0, 1]);  // Outputs valid</code></pre>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns">Patterns</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching">Pattern Matching</a></li></ul>
+  </body>
+</html>

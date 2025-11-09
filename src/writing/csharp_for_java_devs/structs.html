@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Structs</h1>
+    <p>Structs, unlike classes, are value types, meaning they do not have object headers, are passed by value, and are allocated on the stack rather than the heap (unless part of a <a href="./collections">collection</a>)</p>
+<p>They do not support inheritance, but they can implement interfaces</p>
+<p>They should only be used for small, simple data that is commonly created and destroyed</p>
+<p>Most programmers will never create their own struct, but it's important to understand how the ones in libraries you're using work</p>
+<p><code>record struct</code> can be used to declare a struct that is a record
+<br><code>ref struct</code> can be used to declare a struct that cannot escape to the heap
+<br><br>todo struct marshalling info</p>
+<p>Also see: <a href="./classes">Classes</a>, <a href="./enums">Enums</a>, <a href="./extensions">Extensions</a>, <a href="./interfaces">Interfaces</a>, <a href="./object_initializers">Object Initializers</a></p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct">Structure Types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/ref-struct">ref Structure Types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record">Records</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/standard/native-interop/customize-struct-marshalling">Customizing Structure Marshalling</a></li></ul>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>LINQ Expressions</h1>
+     <p>The equivalent to Java's streams. Can be written as methods or as keywords.
+     <br>Allows the following keywords:
+<br><code>from</code>, <code>where</code>, <code>select</code>, <code>group</code>, <code>into</code>, <code>orderby</code>, <code>join</code>, <code>let</code>, <code>in</code>, <code>on</code>, <code>equals</code>, <code>by</code>, <code>ascending</code>, and <code>descending</code></p>
+<pre><code class="language-csharp">// Keywords:
+IEnumerable&lt;int&gt; orderingQuery =
+    from num in numbers
+    where num is &lt; 3 or &gt; 7
+    orderby num
+    select num;
+    
+// Methods:
+IEnumerable&lt;int&gt; orderingQuery = numbers  
+    .Where(num =&gt; num is &lt; 3 or &gt; 7)  
+    .OrderBy(num =&gt; num);</code></pre>
+<br>There is a library called <a href="https://github.com/Cysharp/ZLinq">ZLinq</a> that claims to provide a much faster drop-in replacement
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/linq/">LINQ</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/query-keywords">Query Keywords</a></li></ul>
+  </body>
+</html>

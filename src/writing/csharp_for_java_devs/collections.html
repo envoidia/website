@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Collections</h1>
+     <p>Collections are always a reference type stored on the heap, even if the contained type is a value type</p>
+      <p>Collection expressions <code>[]</code> can be used for all collections, not just arrays</p>
+      <p>You can use a spread element <code>..</code> to place collection values in a collection expression</p>
+      <pre><code class="language-csharp">int[] arr = [1, 2, 3];  
+List&lt;int&gt; list = [5, 6, 7];  
+List&lt;int&gt; list2 = [0, ..arr, 4, ..list, 8];
+Console.WriteLine(list2[3]); // Outputs 3</code></pre>
+      <p>Collections can be indexed from the end via <code>^</code>, where <code>^1</code> is the last element</p>
+      <pre><code class="language-csharp">List&lt;int&gt; list = [1, 2, 3, 4, 5];  
+Console.WriteLine(list[^2]); // Outputs 4</code></pre>
+      <p>They can also be indexed via a range <code>a..b</code> where <code>a</code> is inclusive and <code>b</code> is exclusive. If either operand is not present (eg <code>..b</code>), it will be replaced with the inclusive start or the exclusive end</p>
+      <pre><code class="language-csharp">List&lt;int&gt; list = [1, 2, 3, 4, 5, 6, 7, 8];
+List&lt;int&gt; subset = list[2..^3]; // [3, 4, 5]  
+List&lt;int&gt; subset2 = list[^4..]; // [5, 6, 7, 8]</code></pre>
+      <p>You can create a multidimensional array adding commas to the declaration. Multidimensional array declarations use <code>{}</code></p>
+      <pre><code class="language-csharp">int[,] arr2d = { {1, 4, 2}, {3, 6, 8} };  
+Console.WriteLine(arr2d[1, 2]); // Outputs 8
+      
+int[,,] arr3d = {  
+    { { 1, 2, 3}, {4, 5, 6} },  
+    { { 7, 8, 9}, {10, 11, 12} },
+    { { 13, 14, 15}, {16, 17, 18} }  
+};  
+Console.WriteLine(arr3d[2, 1, 1]); // Outputs 17</code></pre>
+      <p><code>Dictionary&lt;TKey, TValue&gt;</code> is equivalent to Java's <code>HashMap&lt;K, V&gt;</code></p>
+      <p><code>Span&lt;T&gt;</code> is a <code>ref struct</code> that provides a type-safe and memory-safe view into a contiguous region of arbitrary memory, allowing for a snapshot of elements without copying them. It can be used to implement similar behavior to Java's <code>subList</code></p>
+      <p><code>Memory&lt;T&gt;</code> is similar to <code>Span&lt;T&gt;</code>, but it is not a <code>ref struct</code>, and therefore can be placed on the managed heap</p>
+      <p>Other collections: <code>ArrayList</code>, <code>ImmutableArray&lt;T&gt;</code>, <code>SortedList</code>, <code>LinkedList&lt;T&gt;</code>, <code>ImmutableList&lt;T&gt;</code>, <code>HashSet&lt;T&gt;</code>, <code>FrozenSet&lt;T&gt;</code>, <code>SortedSet&lt;T&gt;</code>, <code>ImmutableHashSet&lt;T&gt;</code>, <code>Queue&lt;T&gt;</code>, <code>ConcurrentQueue&lt;T&gt;</code>, <code>ImmutableQueue&lt;T&gt;</code>, <code>SortedDictionary&lt;TKey, TValue&gt;</code>,  <code>KeyedCollection&lt;TKey, TItem&gt;</code>, <code>Stack&lt;T&gt;</code>, <code>ConcurrentStack&lt;T&gt;</code>, <code>ImmutableStack&lt;T&gt;</code>, <code>StringCollection</code>, <code>StringDictionary</code>, <code>ListDictionary</code>, <code>Hashtable</code></p>
+      <p>Most of these are extremely niche. The only ones that you will likely use commonly are <code>Array</code>, <code>List&lt;T&gt;</code>, and <code>Dictionary&lt;TKey, TValue&gt;</code></p>
+      <p>Also see: <a href="./tuples">Tuples</a>, <a href="./pattern_matching">Pattern Matching</a></p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays">Arrays</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/collections">Collections</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/standard/collections/selecting-a-collection-class">Selecting a Collection Class</a></li></ul>
+  </body>
+</html>

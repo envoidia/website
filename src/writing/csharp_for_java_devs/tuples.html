@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Tuples</h1>
+     <p>A tuple is an arbitrarily-sized <a href="./collections">collection</a> of arbitrary variables stored as a value type. They are commonly used as method return types to avoid using <a href="./references"><code>out</code> method parameters</a></p>
+<pre><code class="language-csharp">(double, int) tuple = (4.5, 3);
+Console.WriteLine($&quot;Tuple of {t1.Item1} and {t1.Item2}.&quot;); // Outputs Tuple of 4.5 and 3</code></pre>
+<p>Tuple items can be given names via various means:</p>
+<pre><code class="language-csharp">(short a, char b, float c) tuple = (6, 'x', 8.5);
+
+(short, char, float) tuple = (a: 6, b: 'x', c: 8.5);
+
+short a = 6;
+char b = 'x';
+float c = 8.5;
+(short, char, float) tuple = (a, b, c);</code></pre>
+<p>All three of the above tuple definitions result in items named <code>a</code>, <code>b</code>, and <code>c</code>. Even with explicit names, you can also use the default names (<code>Item1</code> and etc)</p>
+<p>You can set an alias for a tuple type with a <code>using</code> or <code>global using</code> directive</p>
+<pre><code class="language-csharp">using TupleName = (int a, char b);
+
+TupleName tuple = (30, 'x');
+Console.WriteLine(tuple.b); // Outputs 'x'</code></pre>
+<p>To create a tuple that is a reference type, you can create an instance of the <code>System.Tuple</code> class</p>
+<p>Tuples have built-in <a href="./deconstructors">deconstructors</a></p>
+<pre><code class="language-csharp">(int a, string b, uint c, sbyte d) = someTuple;</code></pre>
+<p>Tuples should be used sparingly. In most cases, it is better to use a <a href="./classes">class</a> or <a href="./struct">struct</a></p>
+<br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples">Tuple types</a>
+      <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct">Deconstructors</a></li></ul>
+  </body>
+</html>

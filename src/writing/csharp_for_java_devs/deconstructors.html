@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en_US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/prism.css" rel="stylesheet" />
+    <script src="/prism.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <script src="/header.js"></script>
+    <h1>Deconstructors</h1>
+    <p>You can create a deconstructor for a class by naming a method <code>Deconstruct</code>. All parameters must be <code>out</code>. You can have as many overloads of <code>Deconstruct</code> as you want, but they must all have different argument counts</p>
+    <pre><code class="language-csharp">public void Deconstruct(out int a, out double b, out string c) {
+	a = this.A;
+	b = this.B;
+    c = this.C;
+}
+
+// Usage (creates variables foo, bar, and lorem equal to someVar's A, B, and C):
+(int foo, double bar, string lorem) = someVar;</code></pre>
+<p><a href="./tuples">Tuples</a> have built-in deconstructors</p>
+      <br>MS Docs:
+      <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/deconstruct">Deconstructors</a></li></ul>
+  </body>
+</html>
