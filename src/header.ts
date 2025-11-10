@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (): void => {
   }
 
   fetch('/header.html')
-    .then((response: Response): Promise<string> => response.text())
+    .then(response => response.text())
     .then(data => {
       const header: HTMLElement | null = document.getElementById('header');
       if(header !== null) header.innerHTML = data;
