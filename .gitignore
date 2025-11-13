@@ -1,3 +1,6 @@
+# VC files
+/.git
+
 # IDE files
 /.idea
 /.vscode
