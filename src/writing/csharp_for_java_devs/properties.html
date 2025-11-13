@@ -12,7 +12,7 @@
     <script src="/header.js"></script>
     <h1>Properties</h1>
     <p>Properties define fields that can contain getter and setter methods</p>
-<p><code>get</code> defines a getter, <code>set</code> a setter, and <code>init</code> a setter that is only accessible in an <a href="./object_initializers">object initializer</a>. They can have access modifiers (the access modifier must be of greater privacy than the property itself) and default values</p>
+<p><code>get</code> defines a getter, <code>set</code> a setter, and <code>init</code> a setter that is only accessible at object creation (constructor or <a href="./object_initializers">initializer</a>. They can have access modifiers (the access modifier must be of greater privacy than the property itself) and default values</p>
 <pre><code class="language-csharp">public class Person {
     public string FirstName { get; set; }
 	public string LastName { get; set; }

@@ -24,6 +24,7 @@ bool debugMode = false;
     debugMode = true;
 #endif</code></pre>
 <p><code>#error</code>, <code>#warning</code>, and <code>#line</code> allows you to generate errors and warnings</p>
+    <p><code>#region RegionName</code> and <code>#endregion</code> creates collapsible regions. If you're using this, you should consider whether it's better to split the code into multiple files instead</p>
 <p><code>#pragma warning disable/restore</code> allows you to suppress/restore certain warnings at certain sections of code</p>
 <p><code>#pragma checksum</code> generates checksums for the given source file</p>
 <p>Preprocessor directives can also be used to generate <code>.csproj</code> files, which is used for creating file-based apps (programs that can be run from a single source file)</p>
