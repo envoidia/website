@@ -11,8 +11,11 @@
     <div id="header"></div>
     <script src="/header.js"></script>
     <h1>Attributes</h1>
-    <p>Annotations
-    <br>todo more detail</p>
+    <p>Attributes are the equivalent of Java's Annotations; they give hints and instructions to the compiler and static analysis tools. It's primarily used to mark elements as Obsolete, Deprecated, etc
+    <p>You can autogenerate a method that matches Regex like so:
+    <pre><code class="language-csharp">[GeneratedRegex("abc|def", RegexOptions.IgnoreCase, "en-US")]
+private static partial Regex AbcOrDefGeneratedRegex();</code></pre>
+    <p>todo more detail</p>
     <br>MS Docs:
     <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/attributes/global">Attributes</a></li></ul>
   </body>
