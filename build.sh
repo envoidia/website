@@ -1,4 +1,5 @@
 #!/bin/bash
+# todo autogenerate update date
 
 # Delete existing builds
 rm -r ./build
@@ -19,5 +20,9 @@ rm -r ./build/.idea
 
 # Minify
 npx minify-all-cli -s ./build -d ./build-min
+
+# Add update.js
+CURRENT_DATE=$(date '+%d %b %Y')
+echo "var e=document.getElementById(\"update_date\");null!==e&&(e.innerHTML=\"$CURRENT_DATE);" > ./build-min/update.js
 
 exit 0
