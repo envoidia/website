@@ -1,5 +1,4 @@
 #!/bin/bash
-# todo autogenerate update date
 
 # Delete existing builds
 rm -r ./build

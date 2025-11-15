@@ -17,7 +17,15 @@
 <p>Most programmers will never create their own struct, but it's important to understand how the ones in libraries you're using work</p>
 <p><code>record struct</code> can be used to declare a struct that is a record
 <br><code>ref struct</code> can be used to declare a struct that cannot escape to the heap
-<br><br>todo struct marshalling info</p>
+<br><br>You can use <a href="./attributes">attributes</a> to customize struct layouts in various ways. One of the most interesting is for creation of unions (types with multiple fields in the same memory location):
+    <pre><code class="language-csharp">[StructLayout(LayoutKind.Explicit)]
+public struct Union {
+    [FieldOffset(0)]
+    public int a;
+
+    [FieldOffset(0)]
+    public int b;
+}</code></pre>
 <p>Also see: <a href="./classes">Classes</a>, <a href="./enums">Enums</a>, <a href="./extensions">Extensions</a>, <a href="./interfaces">Interfaces</a>, <a href="./object_initializers">Object Initializers</a></p>
       <br>MS Docs:
       <ul><li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct">Structure Types</a>
