@@ -1,21 +1,5 @@
-![SDF logo](/projects/sdf.png)
-<?# YouTube iSzWvJ9o6b8 /?>
-
-## [Touhou Danmuki \~ Spellbroken Dream Festival](https://insys.itch.io/sdf)
-
-## **東方弾夢記**
-
-Development started: Approx. Apr 2021; Release: 25 Feb 2022; Last updated: 26 Dec 2022
-
-[Source code](https://github.com/envoidia/Touhou-Spellbroken-Dream-Festival)
-
-A full-fledged scene game, in a style reminiscent of Spell Card Collection, Shoot the Bullet, Impossible Spell Card,
-etc. There are a total of 9 stages and 73 scenes. In addition to creative, unique spell card designs, there are also 4
-different playable characters, a myriad of achievements, scoring challenges, and more things to do and goals to aim for
-
 ## [Project Celosia](https://github.com/envoidia/ProjectCelosia/)
-
-[Devlog](https://www.youtube.com/watch?v=4zi9IeLwuN0\&list=PLGVdALNK8H9WjVzB9Zwt-ZI46gIvuRsss)
+<?# YouTube 4zi9IeLwuN0 /?>
 
 Development started: 1 Jul 2025; Release: TBD; Last updated: Probably within the last few days
 
@@ -23,6 +7,18 @@ A strategy-focused turn-based RPG where you train monsters to fight for you, wit
 grinding. Features a story about how trauma influences your perception, how much pain you'll put up with to love
 someone, what it means to be "special", and how to keep on living when nothing matters anymore. Very early in
 development, but progress is good
+
+## [Touhou Danmuki \~ Spellbroken Dream Festival](https://insys.itch.io/sdf)
+### **東方弾夢記**
+<?# YouTube iSzWvJ9o6b8 /?>
+
+[Source code](https://github.com/envoidia/Touhou-Spellbroken-Dream-Festival)
+
+Development started: Approx. Apr 2021; Release: 25 Feb 2022; Last updated: 26 Dec 2022
+
+A full-fledged scene game, in a style reminiscent of Spell Card Collection, Shoot the Bullet, Impossible Spell Card,
+etc. There are a total of 9 stages and 73 scenes. In addition to creative, unique spell card designs, there are also 4
+different playable characters, a myriad of achievements, scoring challenges, and more things to do and goals to aim for
 
 ## [Serendustry](https://github.com/Serendustry/Serendustry)
 
@@ -63,8 +59,6 @@ Development started: ~10 Sep 2020; Release: 07 Jan 2021
 
 A Touhou fangame featuring a single stage with random enemy patterns/midbosses and a movement system (the same as the
 one in Len'en 4 \~ Brilliant Pagoda or Haze Castle), with 3 bosses depending on the route you take. Also not very good
-
-![CoA logo](/projects/coa.png)
 
 ## [Touhou Susumu Kuzure rei \~ Collapse of Animism](https://www.bulletforge.org/u/arkeeneum/p/dong-fang-jian-beng-ling-collapse-of-animism)
 
