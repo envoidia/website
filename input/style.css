@@ -1,0 +1,180 @@
+html {
+    height: 100%;
+    margin: 0;
+    background-color: #110011;
+}
+
+body {
+    color: #e7c7e7;
+    font-family: Koruri, Whitney, Arial, sans-serif;
+    margin: 1vh 4vw;
+}
+
+/* Links */
+a:link {
+    color: #e9aee4;
+}
+
+a:visited {
+    color: #e861dd;
+}
+
+a:hover {
+    color: #ffd6ff;
+}
+
+a:active {
+    color: #c353ff;
+}
+
+/* Timestamps */
+.time {
+    color: yellow;
+}
+
+/* Code */
+code {
+    font-size: 16px;
+    background: #1e141e;
+    border-radius: 4px;
+}
+
+pre {
+    outline: 2px solid #6d2f6a;
+    outline-offset: 2px;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.language-c\# {
+    background-color: #110011;
+}
+
+.hljs-keyword, .hljs-built_in {
+    color: #2b5dcb;
+}
+
+.hljs-number {
+    color: #ed94c0;
+}
+
+.hljs-comment {
+    color: #69b851;
+}
+
+.hljs-title {
+    color: #be8ff9;
+}
+
+.hljs-string {
+    color: #be7336;
+}
+
+.hljs-params {
+    color: #ffffff;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Top navigation bar */
+.topnav {
+    background-color: #050005;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    line-height: 0;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.topnav a {
+    color: #e7c7e7;
+    text-align: center;
+    padding: 17px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    outline: #3b003b solid 3px;
+    display: block;
+}
+
+.topnav a:hover {
+    background-color: #e7c7e7;
+    color: #110011;
+}
+
+.active {
+    background-color: #3b003b;
+}
+
+/* Link directory */
+.directory {
+    background-color: #050005;
+    display: inline-flex;
+    height: 18px;
+    line-height: 18px;
+    vertical-align: top;
+    margin-top: -36px;
+    margin-left: 70px;
+}
+
+.directory p {
+    margin-top: 3px;
+    line-height: 18px;
+}
+
+.directory a {
+    color: #e7c7e7;
+    text-align: center;
+    padding: 0 8px;
+    text-decoration: none;
+    font-size: 12px;
+    outline: #3b003b solid 3px;
+    display: inline-block;
+    line-height: 18px;
+    vertical-align: top;
+}
+
+.directory a:hover {
+    background-color: #e7c7e7;
+    color: #110011;
+}
+
+.loc {
+    background-color: #3b003b;
+}
+
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #e7c7e7;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #050005;
+}
+
+.table1 {
+    width: 180%
+}
+
+/* Mobile-only line breaks */
+@media screen and (min-width: 700px) {
+    .mobile-break {
+        display: none;
+    }
+}

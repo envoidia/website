@@ -1,0 +1,13 @@
+# IDE-specific files
+.vs/
+.vscode/
+.idea/
+Website.sln.DotSettings.user
+
+# Build files
+/output/
+/temp/
+/wwwroot/
+/cache/
+/bin/
+/obj/

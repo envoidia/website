@@ -1,0 +1,78 @@
+@using System.Globalization
+
+@{
+    // Format path for display
+    string FormatPath() => CultureInfo.CurrentCulture.TextInfo
+    .ToTitleCase(Document.Destination.FullPath
+    .Replace('_', ' ')
+    .Replace(".html", "")
+
+    // Special formatting
+    .Replace("csharp", "C#")
+    .Replace("linq", "LINQ"))
+
+    // Correct overzealous capitalization
+    .Replace(" A ", " a ")
+    .Replace(" Of ", " of ")
+    .Replace(" And ", " and ");
+   
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>@(FormatPath().Split('/')[^1] + " - envoidia's website")</title>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+    <img src="/logo.png" loading="lazy" style="width:60px;height:60px;margin-top:20px" alt="My logo">
+    <div class="topnav">
+        @{
+            // Header component, highlighted if active
+            void NavLink(string href, string dataPage, string text) {
+                <a href="@href" data-page="@dataPage" class="@(Document.Destination.FullPath.Contains(dataPage) ? "active" : "")">@text</a>
+            }
+
+            NavLink("/index", "index", "Home");
+            NavLink("/about_me", "about_me", "About Me");
+            NavLink("/socials", "socials", "Socials");
+            NavLink("/projects", "projects", "Projects");
+            NavLink("/writing", "writing", "Writing");
+            NavLink("/fonts", "fonts", "Fonts");
+        }
+    </div>
+</div>
+<div class="directory">
+    @{
+        // Build path display
+        void NavPath() {
+            string[] paths = Document.Destination.FullPath
+            .Replace(".html", "")
+            .Split('/');
+
+            string[] pathsFormatted = FormatPath().Split('/');
+
+            // Always put Home first
+            bool onHomepage = paths[0] == "index";
+            <a href="/index" class=@(onHomepage ? "loc" : "")>Home</a>
+
+            // Already done
+            if(onHomepage) return;
+
+            // Add each subdirectory
+            for(int i = 0; i < paths.Length; i++) {
+                <a href="@('/' + string.Join('/', paths[0..(i + 1)]))" class="@((i == paths.Length - 1) ? "loc" : "")">@pathsFormatted[i]</a>
+            }
+        }
+
+        NavPath();
+    }
+    <p id="directory-path"></p>
+</div>
+<br>
+<br class="mobile-break"><br class="mobile-break"><br class="mobile-break"><br class="mobile-break">
+@RenderBody()
+</body>
+</html>
