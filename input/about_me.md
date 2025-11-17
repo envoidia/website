@@ -1,5 +1,3 @@
-# I'm a faggot
-
 Pronouns: It/She
 
 I like software engineering and game development
