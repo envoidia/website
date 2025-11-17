@@ -10,6 +10,18 @@ body {
     margin: 1vh 4vw;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe[src*="youtube.com"] {
+    width: 800px;
+    max-width: 90vw;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
 /* Links */
 a:link {
     color: #e9aee4;

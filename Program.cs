@@ -3,6 +3,9 @@ using Statiq.Minification;
 
 namespace Website;
 
+/* todo:
+       - fix header formatting on mobile (black border, directory pushed too far up)
+*/
 public static class Program {
     public static async Task<int> Main(string[] args) => await Bootstrapper
         .Factory
@@ -24,7 +27,7 @@ public static class Program {
             builder.PostProcessModules.Add(new MinifyHtml());
         })
         
-        // Minify CSS (MinifyCss() will execute on every file it's given, so filter to actual CSS files first)
+        // Minify CSS (Will execute on every file it's given, so filter to actual CSS files first)
         // todo: minify more aggressively (single-character class names)
         .ModifyPipeline("Assets", builder => { 
             builder.PostProcessModules.Add(new ExecuteIf(Config.FromDocument(doc => 
