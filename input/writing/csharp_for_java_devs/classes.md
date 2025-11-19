@@ -7,11 +7,12 @@ more detail
 
 `this` is the same. `base` is used instead of `super`
 
-Inheritance is much the same, but instead of `extends` or `implements`, the syntax is
-`class ClassName : NameOfClassItExtends, IInterfaceItImplements`. Interface names should be prefixed with `I` to make up
+Inheritance is much the same, but instead of `extends` or `implements`, you use the `:` operator
+
+Interface names should be prefixed with `I` to make up
 for lost clarity from lack of a specific keyword
 
-In order to call the base constructor, use `:` syntax before the constructor body
+In order to call the base constructor, use the `:` operator before the constructor body
 
 ```c#
 public class Foo : Bar {
@@ -35,8 +36,7 @@ overridden
 
 Generally, you should be using [properties](./properties) instead of fields
 
-Also
-see: [Enums](./enums), [Extensions](./extensions), [Interfaces](./interfaces), [Object Initializers](./object_initializers), [Structs](./structs)
+Also see: [Enums](./enums), [Extensions](./extensions), [Interfaces](./interfaces), [Object Initializers](./object_initializers), [Structs](./structs)
 
 MS docs:
 

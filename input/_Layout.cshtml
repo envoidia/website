@@ -14,7 +14,8 @@
     // Correct overzealous capitalization
     .Replace(" A ", " a ")
     .Replace(" Of ", " of ")
-    .Replace(" And ", " and ");
+    .Replace(" And ", " and ")
+    .Replace(" The ", " the ");
    
 }
 
@@ -48,27 +49,23 @@
 <div class="directory">
     @{
         // Build path display
-        void NavPath() {
-            string[] paths = Document.Destination.FullPath
-            .Replace(".html", "")
-            .Split('/');
+        string[] paths = Document.Destination.FullPath
+       .Replace(".html", "")
+       .Split('/');
 
-            string[] pathsFormatted = FormatPath().Split('/');
+       string[] pathsFormatted = FormatPath().Split('/');
 
-            // Always put Home first
-            bool onHomepage = paths[0] == "index";
-            <a href="/index" class=@(onHomepage ? "loc" : "")>Home</a>
+       // Always put Home first
+       bool onHomepage = paths[0] == "index";
+       <a href="/index" class=@(onHomepage ? "loc" : "")>Home</a>
 
-            // Already done
-            if(onHomepage) return;
-
-            // Add each subdirectory
-            for(int i = 0; i < paths.Length; i++) {
-                <a href="@('/' + string.Join('/', paths[0..(i + 1)]))" class="@((i == paths.Length - 1) ? "loc" : "")">@pathsFormatted[i]</a>
-            }
-        }
-
-        NavPath();
+       // Only continue if not already done
+       if(!onHomepage) {
+           // Add each subdirectory
+           for(int i = 0; i < paths.Length; i++) {
+               <a href="@('/' + string.Join('/', paths[0..(i + 1)]))" class="@((i == paths.Length - 1) ? "loc" : "")">@pathsFormatted[i]</a>
+           }
+       }
     }
     <p id="directory-path"></p>
 </div>

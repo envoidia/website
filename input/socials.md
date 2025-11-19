@@ -1,7 +1,5 @@
 # Other websites on which I may or may not exist
 
-<!--<p><img src="/socials/kofi.png"> Ko-fi: <a href="https://ko-fi.com/amygay">amygay</a></p>-->
-
 ![Vencord logo](/socials/vc.png) Discord: @envoidia#0000
 
 ![Neocities logo](/socials/nc.png) Website: You'll never know
@@ -16,8 +14,7 @@
 
 ![itch.io logo](/socials/itch.png) Itch: [insys](https://insys.itch.io)
 
-![Fontstruct logo](/socials/fs.png)
-Fontstruct: [Incandescence](https://fontstruct.com/fontstructors/1962444/incandescence)
+![Fontstruct logo](/socials/fs.png) Fontstruct: [Incandescence](https://fontstruct.com/fontstructors/1962444/incandescence)
 
 ![Pixiv logo](/socials/pixiv.png) Pixiv: [envoidia](https://www.pixiv.net/en/users/108026095)
 
