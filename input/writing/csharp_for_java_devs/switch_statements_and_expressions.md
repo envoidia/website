@@ -10,9 +10,9 @@ You may add case guards that must be matched alongside patterns with `when` and 
 ```c#
 public static Point Transform(Point point) => point switch {
     { X: 0, Y: 0 }                    => new Point(0, 0),
-    { X: var x, Y: var y } when x < y => new Point(x + y, y),
-    { X: var x, Y: var y } when x > y => new Point(x - y, y),
-    { X: var x, Y: var y }            => new Point(2 * x, 2 * y),
+    { X: int x, Y: int y } when x < y => new Point(x + y, y),
+    { X: int x, Y: int y } when x > y => new Point(x - y, y),
+    { X: int x, Y: int y }            => new Point(2 * x, 2 * y),
 };
 ```
 

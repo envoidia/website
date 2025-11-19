@@ -20,7 +20,7 @@ float c = 8.5;
 ```
 
 All three of the above tuple definitions result in items named `a`, `b`, and `c`. Even with explicit names, you can also
-use the default names (`Item1` and etc)
+use the default names (`Item1` etc)
 
 You can set an alias for a tuple type with a `using` or `global using` directive
 

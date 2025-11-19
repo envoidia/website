@@ -3,8 +3,8 @@ have as many overloads of `Deconstruct` as you want, but they must all have diff
 
 ```c#
 public void Deconstruct(out int a, out double b, out string c) {
-	a = this.A;
-	b = this.B;
+    a = this.A; 
+    b = this.B; 
     c = this.C;
 }
 
