@@ -1,5 +1,3 @@
-# Other websites on which I may or may not exist
-
 ![Vencord logo](/socials/vc.png) Discord: @envoidia#0000
 
 ![Neocities logo](/socials/nc.png) Website: You'll never know

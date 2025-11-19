@@ -1,5 +1,3 @@
-# Words are how the soul screams
-
 | Category                                                                 | Last Updated | Description                                                                                  |
 |--------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------|
 | [Pariqorum Horse Racing League](./writing/pariqorum_horse_racing_league) | 27 Apr 2025  | A dramatic retelling of Horse Race Tests where all the horses are genetically modified girls |

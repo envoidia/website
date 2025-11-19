@@ -1,5 +1,3 @@
-# A hidden language everyone can read but almost no one can understand
-
 [￬ recorded-history.ttf](/fonts/recorded-history.ttf)
 
 ![Characters of the font](/fonts/recorded_history.png)
