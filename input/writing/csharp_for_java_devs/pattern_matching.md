@@ -37,9 +37,9 @@ public static string GetSeason(DateTime date) => date.Month switch {
     _ => throw new ArgumentOutOfRangeException(nameof(date), $"Unexpected month: {date.Month}"),
 };
 
-Console.WriteLine(GetSeason(new DateTime(2021, 3, 14)));  // Outputs spring
-Console.WriteLine(GetSeason(new DateTime(2021, 7, 19)));  // Outputs summer
-Console.WriteLine(GetSeason(new DateTime(2021, 2, 17)));  // Outputs winter
+Console.WriteLine(GetSeason(new DateTime(2026, 3, 14)));  // Outputs spring
+Console.WriteLine(GetSeason(new DateTime(2026, 7, 19)));  // Outputs summer
+Console.WriteLine(GetSeason(new DateTime(2026, 2, 17)));  // Outputs winter
 ```
 
 You can use a property pattern to match an expression's [Properties](./properties) or fields
@@ -59,15 +59,14 @@ public bool IsCelebratingHoliday(bool celebratesChristmas, bool celebratesHallow
 };
 ```
 
-The `var` pattern matches any expression, including `null`, and assigns its result to a new local variable, useful for
-additional checks
+You can also assign variables in a pattern
 
 ```c#
-static Point Transform(Point point) => point switch
-{
-    var (x, y) when x < y => new Point(-x, y),
-    var (x, y) when x > y => new Point(x, -y),
-    var (x, y) => new Point(x, y),
+public static Point Transform(Point point) => point switch {
+    { X: 0, Y: 0 }            => new Point(0, 0),
+    (int x, int y) when x < y => new Point(x + y, y),
+    (int x, int y) when x > y => new Point(x - y, y),
+    (int x, int y)            => new Point(2 * x, 2 * y),
 };
 ```
 
@@ -83,12 +82,12 @@ Console.WriteLine(arr is [1, 2, ..]);  // Outputs True
 Console.WriteLine(arr is [0 or 1, <= 2, >= 3, ..]);  // Outputs True
 ```
 
-Elements can also be captured with `var`
+Elements can also be captured:
 
 ```c#
 List<int> numbers = [1, 2, 3];
 
-if (numbers is [var first, _, _]) {
+if (numbers is [var int, _, _]) {
     Console.WriteLine($"The first element of a three-item list is {first}.");
 }
 ```

@@ -8,7 +8,7 @@ privacy than the property itself) and default values
 public class Person {
 	public string FirstName { get; set; }
 	public string LastName { get; set; }
-	public string FullName => FirstName + " " + LastName;
+	public string FullName => $"{FirstName} {LastName}";
 	public uint Age { get; private set; } = 0;
 }
 ```

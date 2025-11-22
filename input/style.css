@@ -65,15 +65,15 @@ pre {
 }
 
 .hljs-keyword, .hljs-built_in {
-    color: #2b5dcb;
+    color: #6798ff;
 }
 
 .hljs-number {
-    color: #ed94c0;
+    color: #ed94bb;
 }
 
 .hljs-comment {
-    color: #69b851;
+    color: #76b668;
 }
 
 .hljs-title {
@@ -81,11 +81,11 @@ pre {
 }
 
 .hljs-string {
-    color: #be7336;
+    color: #e9aee4;
 }
 
 .hljs-params {
-    color: #ffffff;
+    color: #66c8cc;
 }
 
 
