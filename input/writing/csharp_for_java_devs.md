@@ -1,9 +1,9 @@
 # C# For Java Devs
 
-An abridged rewriting of C# docs focusing primarily on differences from Java, made primarily to help myself learn C#\
-It is not exhaustive nor does it make any guarantee of accuracy\
+An abridged rewriting of C# docs focusing primarily on differences from Java, made to help myself learn C#\
+No guarantee of accuracy, completeness, or usefulness is made\
 They are intended to accompany the official documentation, not replace it\
-They are written for .NET 10, which as of this writing is the latest version
+They are written for .NET 10, which is the latest version as of this writing
 
 * [Anonymous Types](./csharp_for_java_devs/anonymous_types)
 * [Attributes](./csharp_for_java_devs/attributes)

@@ -2,7 +2,7 @@ Pronouns: It/She
 
 I like software engineering and game development
 
-I will never kill myself. If I disappear, there was foul play
+I will never kill myself.
 
 My favorite language is [C#](/writing/csharp_for_java_devs.html)
 
@@ -14,9 +14,8 @@ My favorite shows include Venture Bros, It's Always Sunny in Philadelphia, Arche
 Tim and Eric's Awesome Show Great Job!, Scott the Woz, Morel Orel, Nathan For You, The Birthday Boys, I Think You Should
 Leave, and others
 
-My favorite movies include REDLINE, Tokyo Gore Police, All This and Gargantua-2, Radiant is the Blood of the Baboon
-Heart, Walk Hard: The Dewey Cox Story, Fear and Loathing in Las Vegas, Tim and Eric's Billion Dollar Movie, Borderline
-Forever, The Matrix, and others
+My favorite movies include REDLINE, Tokyo Gore Police, Colorful Stage! The Movie: A Miku Who Can't Sing, All This and 
+Gargantua-2, and others
 
 My favorite songs can mostly be found in the following playlists:
 
