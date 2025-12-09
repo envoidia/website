@@ -36,6 +36,8 @@ ParamsExample([1, 2, 3, 4]); // Call with list
 
 `delegate`: Defines a delegate type, which stores a function. In most cases, just use the stdlib `Action` and `Func` delegates. This just lets you give it a unique type and param names
 
+`event`: Defines an event, which is a delegate type that listeners can subscribe to. todo event details
+
 ### Contextual Keywords
 
 Contextual keywords are not reserved, but have special meanings in certain contexts. Most later-added keywords are contextual for backwards compatibility
