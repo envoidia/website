@@ -34,16 +34,11 @@ ParamsExample(1, 2, 3, 4); // Call with any amount of loose params
 ParamsExample([1, 2, 3, 4]); // Call with list
 ```
 
-`delegate`: Defines a delegate type, which stores a function. In most cases, just use the stdlib `Action` and `Func` delegates. This just lets you give it a unique type and param names
-
-`event`: Defines an event, which is a delegate type that listeners can subscribe to. todo event details
-
 ### Contextual Keywords
 
 Contextual keywords are not reserved, but have special meanings in certain contexts. Most later-added keywords are contextual for backwards compatibility
 
-- `add`, `remove`: Define a custom event accessor
-- `partial`: Allows a type or member to be split into multiple definitions. Mostly used to define blank methods to be filled by source generators
+`partial`: Allows a type or member to be split into multiple definitions. Mostly used to define blank methods to be filled by source generators
 
 Also see: [Classes](./classes), [Enums](./enums), [Extensions](./extensions), [Generics](./generics), [Interfaces](./interfaces), [LINQ Expressions](./linq_expressions), [Nullability](./nullability), [Object Initializers](./object_initializers), [Operator Overloading](./operator_overloading), [Operators](./operators), [Pattern Matching](./pattern_matching), [Properties](./properties), [References](./references), [Statements](./statements), [Structs](./structs), [Switch Statements and Expressions](./switch_statements_and_expressions), [Types](./types), [Unsafe Code](./unsafe_code)
 

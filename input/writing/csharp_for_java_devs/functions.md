@@ -14,7 +14,13 @@ Foo(10, 'a', "abc", 500, true);
 Foo(10, ipsum: "abcde", isAmet: true);
 ```
 
-Lambdas are `=>` rather than `->`
+Lambdas are `=>` rather than `->`. Lambdas can be declared `static`
+
+`delegate` defines a delegate type, which stores a function. In most cases, just use the stdlib `Action` and `Func` delegates. Defining a custom delegate just lets you give it a unique type and param names
+
+`event` defines an event, which is a delegate type that listeners can subscribe to. todo event details
+
+`add`, `remove` defines a custom event accessor
 
 MS docs:
 
