@@ -1,5 +1,5 @@
 `true`, `false`, `a = b`, `++a`, `--a`, `a++`, `a--`, `+a`, `-a`, `a + b`, `a - b`, `a * b`, `a / b`, `a % b`, `!a`,
-`a & b`, `a && b`, `a ^ b`, `a | b`, `a || b`,  `~a`, `a << b`, `a >> b`, `a <<< b`, `a == b`, `a != b`, `a < b`,
+`a & b`, `a && b`, `a ^ b`, `a | b`, `a || b`,  `~a`, `a << b`, `a >> b`, `a >>> b`, `a == b`, `a != b`, `a < b`,
 `a > b`, `a <= b`, `a >= b` and `a ? b : c` function the same as Java
 
 Compound assignment operators (eg `+=`) function the same as Java
