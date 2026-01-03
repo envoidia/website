@@ -39,3 +39,9 @@ The others bring visual improvements such as customizable gradients and a custom
 ## [This website](https://github.com/envoidia/website)
 
 Development started: 18 Feb 2025; Last updated: {{ UPDATE_DATE }}
+
+## [VSCode Config](https://github.com/envoidia/vscode-config)
+
+Development started: 16 Dec 2025; Last updated: 03 Jan 2026
+
+My personal VSCode config and a guide to my extensions and keybinds. Really just for me, but available to anyone just in case
