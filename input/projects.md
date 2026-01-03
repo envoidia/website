@@ -31,7 +31,7 @@ Unfinished, but mostly complete. Completion is dependent on features from a not-
 
 ## [Discord CSS](https://github.com/envoidia/discord-css)
 
-Development started: ~2021; Last updated: 17 Nov 2025
+Development started: ~2021; Last updated: 01 Jan 2026
 
 Custom CSS to make Discord better. Consists of separate modules. debloat.css removes a great deal of ads and clutter.
 The others bring visual improvements such as customizable gradients and a custom theme
