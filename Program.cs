@@ -7,6 +7,7 @@ namespace Website;
     - fix header formatting on mobile (black border, directory pushed too far up)
     - fix code blocks on mobile (they don't wrap)
     - fix syntax highlighting (it doesn't understand interpolated/raw strings, and has issues with @ and sometimes < )
+    - do i still need mobile-break
 */
 public static class Program
 {

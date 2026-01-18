@@ -17,5 +17,3 @@
 ![Pixiv logo](/socials/pixiv.png) Pixiv: [envoidia](https://www.pixiv.net/en/users/108026095)
 
 ![AO3 logo](/socials/ao3.png) AO3: [envoidia](https://archiveofourown.org/users/Envoidia)
-
-![Signal logo](/socials/sig.png) Signal: @amygay.666

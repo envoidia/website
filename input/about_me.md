@@ -6,13 +6,9 @@ I will never kill myself.
 
 My favorite language is [C#](/writing/csharp_for_java_devs.html)
 
-My favorite games include Monster Hunter Generations Ultimate, Shin Megami Tensei V Vengeance, DELTARUNE, Balatro,
-Touhou, ZeroRanger, Bloons TD 6, Stardew Valley, Minecraft, Gregtech New Horizons, Terraria, Fire Emblem Engage, Pokemon
-Violet, Project Sekai, Persona 5 Royal, Puyo Puyo Tetris 2, Rabi-Ribi, Melvor Idle, and others
+My favorite games include Monster Hunter Generations Ultimate, Shin Megami Tensei V Vengeance, DELTARUNE, Balatro, Touhou, ZeroRanger, Bloons TD 6, Stardew Valley, Minecraft, Gregtech New Horizons, Terraria, Fire Emblem Engage, Pokemon Violet, Project Sekai, Persona 5 Royal, Puyo Puyo Tetris 2, Rabi-Ribi, Melvor Idle, and others
 
-My favorite shows include Venture Bros, It's Always Sunny in Philadelphia, Archer, YOLO, Comedy Bangbang, American Dad,
-Tim and Eric's Awesome Show Great Job!, Scott the Woz, Morel Orel, Nathan For You, The Birthday Boys, I Think You Should
-Leave, and others
+My favorite shows include Venture Bros, It's Always Sunny in Philadelphia, Archer, YOLO, Comedy Bangbang, American Dad, The Chair Company, Tim and Eric's Awesome Show Great Job!, Scott the Woz, Morel Orel, Nathan For You, The Birthday Boys, I Think You Should Leave, and others
 
 My favorite movies include REDLINE, Tokyo Gore Police, Colorful Stage! The Movie: A Miku Who Can't Sing, All This and 
 Gargantua-2, and others
