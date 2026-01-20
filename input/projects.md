@@ -10,7 +10,7 @@ grinding. Features a story about how trauma influences your perception, how much
 someone, what it means to be "special", and how to keep on living when nothing matters anymore. Very early in
 development, but progress is good
 
-## [Touhou Danmuki \~ Spellbroken Dream Festival](https://insys.itch.io/sdf)
+## [Touhou Danmuki \~ Spellbroken Dream Festival](https://envoidia.itch.io/sdf)
 ### **東方弾夢記**
 <?# YouTube iSzWvJ9o6b8 /?>
 
