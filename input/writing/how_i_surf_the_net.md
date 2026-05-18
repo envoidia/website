@@ -10,6 +10,8 @@ i ended up choosing [Helium](https://helium.computer). it's Chromium-based, but 
 
 (this does not cover Android, but the ideal browser there is [Vanadium](https://github.com/GrapheneOS/Vanadium))
 
+(aside, do NOT install a browser via flatpak. flatpak prevents sandboxing from working properly)
+
 ### configuration
 
 - helium://settings

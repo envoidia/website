@@ -21,6 +21,10 @@ body {
     padding-bottom: 5vw;
 }
 
+::selection {
+    background-color: var(--accent-dark);
+}
+
 img {
     max-width: 100%;
     height: auto;
