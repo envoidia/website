@@ -2,23 +2,16 @@
 
 @{
     // Path formatted for display
-    string[] curPath = CultureInfo.CurrentCulture.TextInfo
-    .ToTitleCase(Document.Destination.FullPath
-    .Replace('_', ' ')
-    .Replace(".html", "")
+    string[] curPath = Document.Destination.FullPath
+        .Replace('_', ' ')
+        .Replace(".html", "")
 
-    // Special formatting
-    .Replace("csharp", "C#")
-    .Replace("linq", "LINQ"))
+        // Special formatting
+        .Replace("csharp", "C#")
+        .Replace("linq", "LINQ")
 
-    // Correct overzealous capitalization
-    .Replace(" A ", " a ")
-    .Replace(" Of ", " of ")
-    .Replace(" And ", " and ")
-    .Replace(" The ", " the ")
-    
-    .Split('/');
-   
+        .Split('/');
+
 }
 
 <!DOCTYPE html>
@@ -39,11 +32,11 @@
                 <a href="@href" data-page="@dataPage" class="@(Document.Destination.FullPath.Contains(dataPage) ? "active" : "")">@text</a>
             }
 
-            _NavLink("/index", "index", "Home");
-            _NavLink("/socials", "socials", "Socials");
-            _NavLink("/projects", "projects", "Projects");
-            _NavLink("/writing", "writing", "Writing");
-            _NavLink("/fonts", "fonts", "Fonts");
+            _NavLink("/index", "index", "home");
+            _NavLink("/socials", "socials", "socials");
+            _NavLink("/projects", "projects", "projects");
+            _NavLink("/writing", "writing", "writing");
+            _NavLink("/fonts", "fonts", "fonts");
         }
     </div>
 </div>
@@ -51,12 +44,12 @@
     @{
         // Build path display
         string[] paths = Document.Destination.FullPath
-       .Replace(".html", "")
-       .Split('/');
+            .Replace(".html", "")
+            .Split('/');
 
-       // Always put Home first
+       // Always put home first
        bool onHomepage = paths[0] == "index";
-       <a href="/index" class=@(onHomepage ? "loc" : "")>Home</a>
+       <a href="/index" class=@(onHomepage ? "loc" : "")>home</a>
 
        // Only continue if not already done
        if(!onHomepage) {
