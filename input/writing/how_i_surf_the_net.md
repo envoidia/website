@@ -15,6 +15,7 @@ i ended up choosing [Helium](https://helium.computer). it's Chromium-based, but 
 ### configuration
 
 - helium://settings
+    - disable suggestions from the search engine
     - disable JavaScript optimization (JIT). the performance hit is negligible, and this removes a significant attack vector. if needed (unlikely), it can be selectively enabled for specific sites
     - change the DNS provider to https://dns.mullvad.net/dns-query
 
